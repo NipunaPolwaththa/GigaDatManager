@@ -1,8 +1,7 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import Demo from './page/demo/Demo';
 
 function App() {
   return (
@@ -13,10 +12,10 @@ function App() {
         autoClose="3000"
       />
       <Router>
-        {/* <Route path="/auth" element={<Login />} />
-          <Route element={<PrivateRoute />}>
-            <Route path="/" element={<Login />} />
-          </Route> */}
+        <Routes>
+          <Route path="/" element={<Demo />} />
+          <Route path="/page/demo" element={<Demo />} />
+        </Routes>
       </Router>
     </div>
   );
